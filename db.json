@@ -1,0 +1,12 @@
+{
+    "events": [
+        {
+          "name": "finish this day",
+          "desc": "find out something new about vue"
+        },
+        {
+          "name": "travel",
+          "desc": "move to Alicante"
+        }
+      ]
+}
