@@ -1,5 +1,5 @@
 interface MyEvent {
   id: number
-  name: string
-  desc: string
+  title: string
+  description: string
 }

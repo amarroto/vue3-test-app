@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 const menu = ref([
   {
-    link: '/',
+    name: 'event-list',
     val: 'Events'
   },
   {
-    link: '/about',
+    name: 'about',
     val: 'About'
   }
 ])
@@ -16,7 +16,7 @@ const menu = ref([
     <v-row justify="center" align="center">
       <ul class="d-flex align-center justinfy-space-between">
         <li v-for="(item, key) in menu" :key="key" class="mx-2">
-          <RouterLink :to="item.link" class="pa-4" active-class="text-cyan rounded">{{
+          <RouterLink :to="{ name: item.name }" class="pa-4" active-class="text-cyan rounded">{{
             item.val
           }}</RouterLink>
         </li>

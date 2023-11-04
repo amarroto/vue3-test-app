@@ -12,9 +12,9 @@ defineProps<{
         :style="{ cursor: 'pointer' }"
         class="text-center"
       >
-        <v-card-title class="text-cyan">{{ event.name }}</v-card-title>
+        <v-card-title class="text-cyan">{{ event.title }}</v-card-title>
         <v-card-text>
-          <div>{{ event.desc }}</div>
+          <div>{{ event.description }}</div>
         </v-card-text>
       </v-card>
     </template>

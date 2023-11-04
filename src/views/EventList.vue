@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import ListDefault from '@/components/ListDefault.vue'
 import { onMounted } from 'vue'
 import EventService from '@/services/EventService.js'
+import router from '@/router'
 
 let events = ref<MyEvent[]>([])
 onMounted(() => {
@@ -17,5 +18,12 @@ onMounted(() => {
 </script>
 <template>
   <h1 class="text-center mb-8">Events for GOOD</h1>
-  <ListDefault :events="events"></ListDefault>
+  <ListDefault
+    :events="events"
+    @clickItem="
+      (event: MyEvent) => {
+        router.push(`/event/${event.id}`)
+      }
+    "
+  ></ListDefault>
 </template>

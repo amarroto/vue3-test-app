@@ -14,6 +14,6 @@ export default {
     return apiClient.get<MyEvent[]>('/events')
   },
   getEvent(id: any) {
-    return apiClient.get<MyEvent>(`/event/${id}`)
+    return apiClient.get<MyEvent>(`/events/${id}`)
   }
 }
