@@ -1,16 +1,19 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import ListDefault from '@/components/ListDefault.vue'
+import { onMounted } from 'vue'
+import EventService from '@/services/EventService.js'
 
-const events: MyEvent[] = [
-  {
-    name: 'finish this day',
-    desc: 'find out something new about vue'
-  },
-  {
-    name: 'travel',
-    desc: 'move to Alicante'
-  }
-]
+let events = ref<MyEvent[]>([])
+onMounted(() => {
+  EventService.getEvents()
+    .then(({ data }) => {
+      events.value = data
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+})
 </script>
 <template>
   <h1 class="text-center mb-8">Events for GOOD</h1>

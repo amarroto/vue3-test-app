@@ -1,12 +1,14 @@
 {
     "events": [
         {
-          "name": "finish this day",
-          "desc": "find out something new about vue"
+          "id": 1,
+          "title": "finish this day",
+          "description": "find out something new about vue"
         },
         {
-          "name": "travel",
-          "desc": "move to Alicante"
+          "id": 2,
+          "title": "travel",
+          "description": "move to Alicante"
         }
       ]
 }
